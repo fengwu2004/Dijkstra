@@ -19,12 +19,15 @@ public:
     bool getMinPath(int start, int end, std::vector<int>& outPath);
     
 private:
-    void dijkstra(int start);
+    void dijkstra(int start, int end);
     
-    int updateMinDistInUnknow();
+    int updateMinDistInUnknow(int end);
     
 private:
     int m_matrix[6][6];
+    
+    bool m_bFind;
+    
     Vertex m_path[6];
 };
 

@@ -10,7 +10,7 @@
 
 #define INFINITE 1000000000
 
-void DijkstraSearch::dijkstra(int start) {
+void DijkstraSearch::dijkstra(int start, int end) {
     
     if (start < 0 || start >= 6) {
         
@@ -30,9 +30,14 @@ void DijkstraSearch::dijkstra(int start) {
     
     while (true) {
         
-        int index = updateMinDistInUnknow();
+        int index = updateMinDistInUnknow(end);
         
         if (index == -1) {
+            
+            break;
+        }
+        
+        if (m_bFind) {
             
             break;
         }
@@ -53,7 +58,7 @@ void DijkstraSearch::dijkstra(int start) {
 }
 
 
-int DijkstraSearch::updateMinDistInUnknow() {
+int DijkstraSearch::updateMinDistInUnknow(int end) {
     
     int minDist = INFINITE;
     
@@ -77,6 +82,11 @@ int DijkstraSearch::updateMinDistInUnknow() {
         m_path[index].dist = minDist;
         
         m_path[index].known = true;
+        
+        if (m_bFind == index) {
+            
+            m_bFind = true;
+        }
     }
     
     return index;
@@ -92,6 +102,21 @@ bool DijkstraSearch::getMinPath(int start, int end, std::vector<int>& outPath) {
     if (end < 0 || end >= 6) {
         
         return false;
+    }
+    
+    m_bFind = false;
+    
+    dijkstra(start, end);
+    
+    int path = m_path[end].pre;
+    
+    outPath.push_back(path);
+    
+    while (m_path[path].pre != -1) {
+        
+        path = m_path[path].pre;
+        
+        outPath.push_back(path);
     }
     
     return true;
