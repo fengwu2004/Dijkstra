@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C34B4A21CC3C0B8005C695E /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C34B4A01CC3C0B8005C695E /* Vertex.cpp */; };
+		2C34B4A31CC3C0B8005C695E /* Vertex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2C34B4A11CC3C0B8005C695E /* Vertex.hpp */; };
 		2C5BC1911CC0F3D00081CA26 /* Dijkstra.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5BC1901CC0F3D00081CA26 /* Dijkstra.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C5BC19A1CC0F3DF0081CA26 /* DijkstraSearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C5BC1981CC0F3DF0081CA26 /* DijkstraSearch.cpp */; };
+		2C5BC19B1CC0F3DF0081CA26 /* DijkstraSearch.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2C5BC1991CC0F3DF0081CA26 /* DijkstraSearch.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C34B4A01CC3C0B8005C695E /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
+		2C34B4A11CC3C0B8005C695E /* Vertex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vertex.hpp; sourceTree = "<group>"; };
 		2C5BC18D1CC0F3D00081CA26 /* Dijkstra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dijkstra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5BC1901CC0F3D00081CA26 /* Dijkstra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dijkstra.h; sourceTree = "<group>"; };
 		2C5BC1921CC0F3D00081CA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C5BC1981CC0F3DF0081CA26 /* DijkstraSearch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DijkstraSearch.cpp; sourceTree = "<group>"; };
+		2C5BC1991CC0F3DF0081CA26 /* DijkstraSearch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DijkstraSearch.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +56,10 @@
 			children = (
 				2C5BC1901CC0F3D00081CA26 /* Dijkstra.h */,
 				2C5BC1921CC0F3D00081CA26 /* Info.plist */,
+				2C5BC1981CC0F3DF0081CA26 /* DijkstraSearch.cpp */,
+				2C5BC1991CC0F3DF0081CA26 /* DijkstraSearch.hpp */,
+				2C34B4A01CC3C0B8005C695E /* Vertex.cpp */,
+				2C34B4A11CC3C0B8005C695E /* Vertex.hpp */,
 			);
 			path = Dijkstra;
 			sourceTree = "<group>";
@@ -59,6 +71,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5BC19B1CC0F3DF0081CA26 /* DijkstraSearch.hpp in Headers */,
+				2C34B4A31CC3C0B8005C695E /* Vertex.hpp in Headers */,
 				2C5BC1911CC0F3D00081CA26 /* Dijkstra.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5BC19A1CC0F3DF0081CA26 /* DijkstraSearch.cpp in Sources */,
+				2C34B4A21CC3C0B8005C695E /* Vertex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +293,7 @@
 				2C5BC1971CC0F3D00081CA26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
