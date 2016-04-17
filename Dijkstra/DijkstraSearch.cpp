@@ -28,8 +28,6 @@ void DijkstraSearch::dijkstra(int start) {
     
     m_path[start].dist = 0;
     
-    m_path[start].pre = 0;
-    
     while (true) {
         
         int index = updateMinDistInUnknow();
